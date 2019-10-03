@@ -2,7 +2,7 @@
 #include <list>
 using namespace std;
 /* list的底层源码实现是双向链表 */
-int main()
+int main5998()
 {
 	 list<int> l1; // 构造空的l1
 	 list<int> l2(4, 100); // l2中放4个值为100的元素
