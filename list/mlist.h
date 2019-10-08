@@ -168,7 +168,7 @@ namespace lxh
 		{
 			iterator tmp;
 			iterator tag = --pos;
-			pos++;
+			pos++;/* 此处要记录返回值 */
 			for (tmp=_begin;tmp!=_end;++tmp)
 			{
 				insert(pos, *tmp);
@@ -195,7 +195,7 @@ namespace lxh
 		{
 			ListNode<T>* npos = pos.m_pos;/* 转数字为节点指针 */
 			ListNode<T>* res = npos->p_next;/*  指针指向的对象已经无效了*/
-			npos->p_prev->p_next = npos->p_next;
+			npos->p_prev->p_next = npos->p_next;/* 删除链表节点 */
 			npos->p_next->p_prev = npos->p_prev;
 			delete npos;
 
